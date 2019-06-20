@@ -1,0 +1,96 @@
+#1.sorunun cevabi
+
+
+kelime=input("kelime girin:  ")
+boyut=len(kelime)
+print(" "*8,"*"*(boyut+4),8*" ",sep="")
+print(" "*6,"**"," "*(boyut+4),"**",6*" ",sep="")
+print(" "*4,"**"," "*(boyut+8),"**",4*" ",sep="")
+print(" "*2,"**"," "*(boyut+12),"**",2*" ",sep="")
+print("**"," "*8,kelime,8*" ","**",sep="")
+print("**"," "*8,"-"*boyut,8*" ","**",sep="")
+print(" "*2,"**"," "*(boyut+12),"**",2*" ",sep="")
+print(" "*4,"**"," "*(boyut+8),"**",4*" ",sep="")
+print(" "*6,"**"," "*(boyut+4),"**",6*" ",sep="")
+print(" "*8,"*"*(boyut+4),8*" ",sep="")
+input()#sorunun ekranda gorulmesi icin
+
+#2. sorunun cevabi
+yol_km=input("km cinsinden alinan yol:   ")
+yol_mil=float(yol_km)*0.62
+print("alinan mil:   ",yol_mil)
+input()#sonucun ekranda gorulmesi icin
+
+#3.sorunun cevabi
+ad=input("adinizi giriniz:   ")
+soyad=input("soyadinizi giriniz:   ")
+vize=int(input("vize notunuzu giriniz:   "))
+final=int(input("final notunuzu giriniz:   "))
+kacan_ders=int(input("kacirdiginiz ders saatinizi giriniz:   "))
+ortalama=vize*0.3+final*0.5+(100-(kacan_ders*5))*0.2
+print(ad,soyad,"isimli ogrencinin not ortalamasi:  ",ortalama,"'dir")
+dosya=open("ogrencinothesaplama.txt","w")
+dosya.write(ad)
+dosya.write(" ")
+dosya.write(soyad)
+dosya.write(" ")
+dosya.write(str(vize))
+dosya.write(" ")
+dosya.write(str(final))
+dosya.write(" ")
+dosya.write(str(kacan_ders))
+dosya.write(" ")
+dosya.write(str(ortalama))
+
+dosya.close()
+
+
+#4.sorunun cevabi
+ana_para=float(input("ana para miktarinizi giriniz:  "))
+faiz_suresi=float(input("faiz suresini yil olarak giriniz:  "))
+faiz_orani=float(input("faiz oranini giriniz:  "))
+faiz=ana_para*faiz_suresi*(faiz_orani/100)
+toplam_para_miktari=faiz+ana_para
+aylik_ortalama_faiz=faiz/(faiz_suresi*12)
+gunluk_ortalama_faiz=faiz/(faiz_suresi*366)
+print("toplam faiz tutari:  ",faiz,"\ntoplam para miktari:  ",toplam_para_miktari,"\naylik ortalama faiz:  ",aylik_ortalama_faiz,"\ngunluk ortalama faiz:  ",gunluk_ortalama_faiz)
+
+
+dosya=open("faizhesaplama.txt","w")
+dosya.write("toplam faiz:  ")
+dosya.write(str(faiz))
+dosya.write("toplam para miktari:  ")
+dosya.write(str(toplam_para_miktari))
+dosya.write("aylik ortalama faiz:  ")
+dosya.write(str(aylik_ortalama_faiz))
+doya.write("gunluk ortalama faiz:  ")
+dosya.write(str(gunluk_ortalama_faiz))
+dosya.close()
+
+#5.sorunun cevabi
+mutfak=float(input("mutfakta harcanan miktar:  "))
+egitim=float(input("egitimde harcanan miktar:  "))
+giyim=float(input("giyimde harcanan miktar:  "))
+ulasim=float(input("ulasimda harcanan miktar:  "))
+aylik_gelir=float(input("aylik gelir miktari:  "))
+aylik_toplam_masraf=mutfak+egitim+giyim+ulasim
+oran=(aylik_toplam_masraf/aylik_gelir)*100
+print("aylik toplam masraf:",aylik_toplam_masraf,"\nmasrafin aylik gelire orani: ",int(oran))
+dosya=open("aylikmasraf.txt","w")
+dosya.write("aylik toplam masraf:  ")
+dosya.write(str(aylik_toplam_masraf))
+dosya.write("masrafin aylik gelire orani:  ")
+dosya.write(str(int(oran)))
+dosya.close()
+
+
+#6.sorunun cevabi
+print("""python'un kurucusu Guido Van Rossum, hollanda'nin Amsterdam'daki "universiteit van amsterdam" okulundan 1982'de mezun olmustur.""")
+print('python\'un kurucusu Guido Van Rossum, hollanda\'nin Amsterdam\'daki "universiteit van amsterdam" okulundan 1982\'de mezun olmustur.')
+print("python'un kurucusu Guido Van Rossum, hollanda'nin Amsterdam'daki \"universiteit van amsterdam\" okulundan 1982'de mezun olmustur.")
+
+
+
+
+
+
